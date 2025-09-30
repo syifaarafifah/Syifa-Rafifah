@@ -48,30 +48,6 @@ export default function Experience() {
     }
   ];
 
-  // Variants untuk animasi container
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  // Variants untuk animasi item
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
-  };
-
   return (
     <motion.section 
       ref={ref} 
@@ -111,12 +87,7 @@ export default function Experience() {
         </motion.div>
 
         {/* Timeline */}
-        <motion.div 
-          className="relative"
-          variants={containerVariants}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-        >
+        <div className="relative">
           {/* Vertical Timeline Line */}
           <div className="absolute left-6 md:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-200/50 to-purple-200/50" />
 
@@ -125,7 +96,13 @@ export default function Experience() {
               <motion.div
                 key={index}
                 className="relative flex items-start group"
-                variants={itemVariants}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                transition={{ 
+                  duration: 0.6, 
+                  delay: index * 0.2,
+                  ease: "easeOut"
+                }}
                 whileHover={{ 
                   y: -2,
                   transition: { type: "spring", stiffness: 400, damping: 25 }
@@ -164,11 +141,9 @@ export default function Experience() {
                   >
                     {/* Title and Company */}
                     <div className="mb-4">
-                      <motion.h3 
-                        className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300"
-                      >
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
                         {exp.title}
-                      </motion.h3>
+                      </h3>
                       <div className="flex flex-col sm:flex-row sm:items-center text-gray-700 gap-2">
                         <div className="flex items-center">
                           <FaBriefcase className="mr-2 text-blue-500 text-sm" />
@@ -220,7 +195,7 @@ export default function Experience() {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Footer Note */}
         <motion.div

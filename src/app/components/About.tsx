@@ -143,7 +143,7 @@ export default function About() {
                       <Smartphone size={20} className="text-purple-600" />
                     </div>
                     <h4 className="font-medium text-gray-800 text-sm">Mobile Dev</h4>
-                    <p className="text-xs text-gray-600 mt-1">React Native</p>
+                    <p className="text-xs text-gray-600 mt-1">React Native, Expo</p>
                   </div>
 
                   <div className="text-center">

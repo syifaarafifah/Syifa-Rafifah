@@ -163,7 +163,7 @@ export default function Contact() {
                 <h3 className="text-2xl font-light text-gray-900 mb-6">Connect With Me</h3>
                 <div className="flex space-x-4">
                   <a
-                    href="https://linkedin.com/in/syifa-rafifah-hidayat"
+                    href="https://tinyurl.com/syifarafifah"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center justify-center hover:bg-gray-800 transition-colors duration-200"
@@ -173,7 +173,7 @@ export default function Contact() {
                   </a>
                   
                   <a
-                    href="https://github.com/syifarafifah"
+                    href="https://github.com/syifaarafifah/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center justify-center hover:bg-gray-800 transition-colors duration-200"

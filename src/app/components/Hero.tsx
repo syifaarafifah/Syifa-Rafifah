@@ -29,6 +29,11 @@ export default function Hero() {
     }
   };
 
+  // Function to open resume
+  const openResume = () => {
+    window.open('https://drive.google.com/file/d/13aXnfkKH5__PQQiv1lP843CRFLN_CNZC/view?usp=sharing', '_blank');
+  };
+
   useEffect(() => {
     // Set loading state after component mounts
     const timer = setTimeout(() => {
@@ -254,12 +259,12 @@ export default function Hero() {
         style={{ 
           transitionDelay: '0.6s'
         }}>
-          <a 
-            href="#projects" 
-            className="px-8 py-3 bg-gray-900 text-white rounded-full text-lg hover:bg-gray-800 transition-all duration-300 font-normal transform hover:scale-105 shadow-lg hover:shadow-xl"
+          <button 
+            onClick={openResume}
+            className="px-8 py-3 bg-gray-900 text-white rounded-full text-lg hover:bg-gray-800 transition-all duration-300 font-normal transform hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer"
           >
-            View Portfolio
-          </a>
+            View Resume
+          </button>
           <button 
             onClick={scrollToContact}
             className="px-8 py-3 bg-transparent text-gray-900 border border-gray-400 rounded-full text-lg hover:bg-white/70 transition-all duration-300 font-normal transform hover:scale-105 backdrop-blur-sm cursor-pointer"
@@ -281,7 +286,6 @@ export default function Hero() {
         <div className="animate-bounce">
           <ChevronDown size={36} color="#666" className="opacity-70" />
         </div>
-        <p className="text-gray-600 text-sm mt-2 text-center">Explore my work</p>
       </div>
     </section>
   );

@@ -5,7 +5,6 @@ import { ChevronDown } from 'lucide-react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 
 export default function Hero() {
-  const containerRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const scrollIndicatorRef = useRef<HTMLDivElement>(null);

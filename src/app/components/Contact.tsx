@@ -1,6 +1,6 @@
 // src/components/Contact.tsx
 'use client';
-import { useInView, useScroll, useTransform, motion } from 'framer-motion';
+import { useScroll, useTransform, motion } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { FaLinkedin } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
@@ -105,10 +105,10 @@ export default function Contact() {
           <h1 className="text-5xl md:text-6xl font-light text-gray-900 mb-6 tracking-tight">
             Get In Touch
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Let's discuss your project and bring your ideas to life. 
-            I'm always open to new opportunities and creative collaborations.
-          </p>
+        <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          Let&apos;s discuss your project and bring your ideas to life. 
+          I&apos;m always open to new opportunities and creative collaborations.
+        </p>
         </motion.div>
 
         {/* Contact Content Grid */}
@@ -195,7 +195,7 @@ export default function Contact() {
               {sendStatus === 'success' && (
                 <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
                   <p className="text-green-800 text-center">
-                    ✅ Message sent successfully! I'll get back to you soon.
+                    ✅ Message sent successfully! I&apos;ll get back to you soon.
                   </p>
                 </div>
               )}
